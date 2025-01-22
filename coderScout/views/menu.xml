@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="coderScout_assessment_root"
+              name="Assessment"
+              parent="hr_recruitment.menu_hr_recruitment_root"
+              action="action_coderScout_assessment"/>
+
+</odoo>
