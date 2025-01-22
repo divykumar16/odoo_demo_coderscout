@@ -79,7 +79,7 @@ You need to create a PostgreSQL user for Odoo and configure the database. Run th
     ```
 ## Step 4: Configure IDE
 
-In your IDE, configure the Odoo server with the following:
+You need to update your IDE configuration with the following:
 
 1. **Odoo executable path**: Set it to `/customModule/odoo/odoo-bin`.
 2. **Script parameter**: Add the parameter `-c /customModule/conf/odoo.conf` to point to your configuration file.
