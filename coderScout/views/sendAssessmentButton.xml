@@ -1,0 +1,64 @@
+<odoo>
+    <data>
+
+        <record id="coderScout_action_send_assessment" model="ir.actions.client">
+            <field name="name">Send Assessment</field>
+            <field name="tag">action_send_assessment</field>
+        </record>
+
+        <record id="view_hr_applicant_form" model="ir.ui.view">
+            <field name="name">hr.candidate.form</field>
+            <field name="model">hr.candidate</field>
+            <field name="inherit_id" ref="hr_recruitment.hr_candidate_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="inside">
+                    <button name="action_send_assessment"
+                            string="Send Assessment"
+                            type="object"
+                            class="btn-primary o_form_button"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_coderscout_assessment_form" model="ir.ui.view">
+            <field name="name">assessment.form</field>
+            <field name="model">coderscout.assessment</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="candidate_id_number" string="Candidate ID" readonly="1" invisible="1"/>
+                        <field name="candidate_id" string="Candidate Name" readonly="1" widget="many2one"
+                               options="{'no_open': True}"/>
+                        <field name="job_opening" string="Job Opening" required="1"
+                               placeholder="-- Select Job Opening --"/>
+                        <field name="coderScout_assessment_name" string="CoderScout Assessment" required="1"
+                               placeholder="-- Select Assessment --"/>
+                        <field name="test_start_time" String="Assessment Start Time" required="1"
+                               placeholder="-- Select Assessment Start Time --"/>
+                        <div class="o_form_label o_form_label_readonly">
+                            <span>TimeZone</span>
+                            <span id="timezone_span" style="margin-left: 11%;"/>
+                        </div>
+                    </group>
+
+                    <footer>
+                        <button name="action_submit" string="Submit" type="object" class="btn-primary"/>
+                    </footer>
+                    <script type="text/javascript">
+                        setTimeout(function() {
+                        const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+                        const timezoneSpan = document.getElementById('timezone_span');
+
+                        if (timezoneSpan) {
+                        timezoneSpan.innerText = timezone;
+                        } else {
+                        console.log("Error: timezone_span not found.");
+                        }
+                        }, 10);
+                    </script>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>
