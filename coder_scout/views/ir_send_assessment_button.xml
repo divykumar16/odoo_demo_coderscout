@@ -1,11 +1,6 @@
 <odoo>
     <data>
 
-        <record id="coderScout_action_send_assessment" model="ir.actions.client">
-            <field name="name">Send Assessment</field>
-            <field name="tag">action_send_assessment</field>
-        </record>
-
         <record id="view_hr_applicant_form" model="ir.ui.view">
             <field name="name">hr.candidate.form</field>
             <field name="model">hr.candidate</field>
