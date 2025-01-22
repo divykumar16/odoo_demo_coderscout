@@ -7,7 +7,7 @@ This guide will help you set up Odoo 18 locally and create a custom module. Foll
 - Git
 - PostgreSQL
 - Python 3.7 or higher
-- A suitable IDE (e.g., Visual Studio Code, PyCharm)
+- A suitable IDE (e.g. PyCharm)
 
 ---
 
@@ -30,8 +30,8 @@ customModule
     ├── conf
     │   └── odoo.conf
     ├── custom_addons
-    │   └── <your_custom_module>
-    └── odoo
+    │   └── coder_scout
+    └── odoo (18.0)
 ```
 
 ## Step 2: Set Up Custom Module Structure
@@ -79,7 +79,7 @@ You need to create a PostgreSQL user for Odoo and configure the database. Run th
     ```
 ## Step 4: Configure IDE
 
-You need to update your IDE configuration with the following:
+You need to update your IDE (PyCharm) configuration with the following:
 
 1. **Odoo executable path**: Set it to `/customModule/odoo/odoo-bin`.
 2. **Script parameter**: Add the parameter `-c /customModule/conf/odoo.conf` to point to your configuration file.
