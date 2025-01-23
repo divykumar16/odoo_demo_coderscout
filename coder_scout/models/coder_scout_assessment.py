@@ -4,7 +4,7 @@ from odoo.exceptions import UserError
 
 
 class CoderScoutAssessment(models.Model):
-    _name = 'coderscout.assessment'
+    _name = 'coder_scout.assessment'
     _description = "Candidate Assessment Details"
 
     candidate_id = fields.Many2one('hr.candidate', string="Candidate", required=True)
@@ -123,7 +123,7 @@ class HRCandidate(models.Model):
         return {
             'type': 'ir.actions.act_window',
             'name': 'Send Assessment',
-            'res_model': 'coderscout.assessment',
+            'res_model': 'coder_scout.assessment',
             'view_mode': 'form',
             'target': 'new',
             'context': {

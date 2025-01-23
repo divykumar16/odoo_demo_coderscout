@@ -8,9 +8,9 @@
             <xpath expr="//app[@name='hr_recruitment']" position="inside">
                 <block title="CoderScout API Key Configuration" name="coder_scout_api_key">
                     <div class="oe_row">
-                        <label for="coderscout_api_key" string="API Key: " class="oe_form_label"
+                        <label for="coder_scout_api_key" string="API Key: " class="oe_form_label"
                         />
-                        <field name="coderscout_api_key" class="oe_form_field" placeholder="Enter your API key here"
+                        <field name="coder_scout_api_key" class="oe_form_field" placeholder="Enter your API key here"
                                style="width: 33%;"/>
                     </div>
                 </block>

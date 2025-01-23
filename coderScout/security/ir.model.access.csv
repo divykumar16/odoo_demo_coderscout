@@ -1,2 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-coderscout.assessment.access_coderscout_assessment,access_coderscout_assessment,model_coderscout_assessment,base.group_user,1,1,1,1

@@ -1,11 +1,6 @@
 <odoo>
     <data>
 
-        <record id="coderScout_action_send_assessment" model="ir.actions.client">
-            <field name="name">Send Assessment</field>
-            <field name="tag">action_send_assessment</field>
-        </record>
-
         <record id="view_hr_applicant_form" model="ir.ui.view">
             <field name="name">hr.candidate.form</field>
             <field name="model">hr.candidate</field>
@@ -20,9 +15,9 @@
             </field>
         </record>
 
-        <record id="view_coderscout_assessment_form" model="ir.ui.view">
+        <record id="view_coder_scout_assessment_form" model="ir.ui.view">
             <field name="name">assessment.form</field>
-            <field name="model">coderscout.assessment</field>
+            <field name="model">coder_scout.assessment</field>
             <field name="arch" type="xml">
                 <form>
                     <group>
