@@ -28,8 +28,9 @@
                                placeholder="-- Select Job Opening --"/>
                         <field name="coderScout_assessment_name" string="CoderScout Assessment" required="1"
                                placeholder="-- Select Assessment --"/>
-                        <field name="test_start_time" String="Assessment Start Time" required="1"
-                               placeholder="-- Select Assessment Start Time --"/>
+                        <field name="test_start_time" string="Assessment Start Time" required="1"
+                               placeholder="-- Select Assessment Start Time --"
+                               help="Please select a future date and time for the assessment."/>
                         <div class="o_form_label o_form_label_readonly">
                             <span>TimeZone</span>
                             <span id="timezone_span" style="margin-left: 11%;"/>

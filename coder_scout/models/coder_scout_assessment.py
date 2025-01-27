@@ -1,3 +1,5 @@
+from email.policy import default
+
 import requests
 from odoo import api, models, fields
 from odoo.exceptions import UserError
@@ -18,6 +20,12 @@ class CoderScoutAssessment(models.Model):
     score = fields.Integer(string="Score")
     assessment_report_url = fields.Char(string="Assessment Report URL")
     feedback = fields.Text(string="Feedback")
+
+    @api.constrains('test_start_time')
+    def _check_start_time(self):
+        for record in self:
+            if record.test_start_time and record.test_start_time < fields.Datetime.now():
+                raise UserError('The Assessment Start Time must be in the future.')
 
     @api.model
     def _get_coderscout_assessments(self):

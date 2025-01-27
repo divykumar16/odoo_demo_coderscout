@@ -5,6 +5,6 @@ class ResConfigSettings(models.TransientModel):
 
     coder_scout_api_key = fields.Char(
         string="CoderScout API Key",
-        config_parameter='coder_scout.api_key',
+        config_parameter='coder_scout_api_key',
         help="API Key for connecting to the CoderScout service.",
     )

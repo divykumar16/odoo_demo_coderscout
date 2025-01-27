@@ -1,12 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
-
     <record id="res_config_settings_view_form" model="ir.ui.view">
         <field name="name">res.config.settings.coder_scout</field>
         <field name="model">res.config.settings</field>
         <field name="inherit_id" ref="hr_recruitment.res_config_settings_view_form"/>
         <field name="arch" type="xml">
             <xpath expr="//app[@name='hr_recruitment']" position="inside">
-                <block title="CoderScout API Key Configuration" name="coder_scout_api_key">
+                <block title="CoderScout API Key Configuration">
                     <div class="oe_row">
                         <label for="coder_scout_api_key" string="API Key: " class="oe_form_label"
                         />
@@ -17,5 +17,4 @@
             </xpath>
         </field>
     </record>
-
 </odoo>

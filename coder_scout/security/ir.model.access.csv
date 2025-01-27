@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-coder_scout.access_coder_scout_assessment,access_coder_scout_assessment,coder_scout.model_coder_scout_assessment,base.group_user,1,0,0,0
+coder_scout.access_coder_scout_assessment,access_coder_scout_assessment,coder_scout.model_coder_scout_assessment,base.group_user,1,1,1,1
