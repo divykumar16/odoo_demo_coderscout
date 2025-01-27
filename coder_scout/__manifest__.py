@@ -1,6 +1,6 @@
 {
     "name": "CoderScout",
-    "version": "18.0.1.0",
+    "version": "18.0.0.0",
     'category': 'Human Resources',
     "author": "DIVY PATEL",
     'depends': ['base', 'hr_recruitment'],
@@ -14,8 +14,8 @@
         "views/ir_send_assessment_button.xml",
         'views/res_config_settings_view.xml',
     ],
-    'price': 49.99,
-    'currency': 'USD',
+    # 'price': 49.99,
+    # 'currency': 'USD',
     "installable": True,
     "application": True,
     "license": "LGPL-3"
