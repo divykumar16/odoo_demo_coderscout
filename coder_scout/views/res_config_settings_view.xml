@@ -11,7 +11,7 @@
                         <label for="coder_scout_api_key" string="API Key: " class="oe_form_label"
                         />
                         <field name="coder_scout_api_key" class="oe_form_field" placeholder="Enter your API key here"
-                               style="width: 33%;"/>
+                               style="width: 280px; margin-left: 10px; text-align: center;"/>
                     </div>
                 </block>
             </xpath>

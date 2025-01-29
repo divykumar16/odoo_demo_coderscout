@@ -2,7 +2,7 @@
 <odoo>
 
     <record id="view_coder_scout_assessment_list" model="ir.ui.view">
-        <field name="name">coder_scout.assessment.list</field>
+        <field name="name">Assessments</field>
         <field name="model">coder_scout.assessment</field>
         <field name="arch" type="xml">
             <list string="CoderScout Assessments">
@@ -19,7 +19,7 @@
     </record>
 
     <record id="action_coder_scout_assessment" model="ir.actions.act_window">
-        <field name="name">coder_scout.assessment.list</field>
+        <field name="name">Assessments</field>
         <field name="res_model">coder_scout.assessment</field>
         <field name="view_mode">list</field>
         <field name="help" type="html">

@@ -1,5 +1,3 @@
-from email.policy import default
-
 import requests
 from odoo import api, models, fields
 from odoo.exceptions import UserError
@@ -12,7 +10,7 @@ class CoderScoutAssessment(models.Model):
     candidate_id = fields.Many2one('hr.candidate', string="Candidate", required=True)
     candidate_id_number = fields.Integer(related="candidate_id.id", string="Candidate ID", readonly=True)
     coderScout_assessment_name = fields.Selection(
-        selection=lambda self: self._get_coderscout_assessments(),
+        selection=lambda self: self._get_coderScout_assessments(),
         string="CoderScout Assessment Name", required=True,
     )
     job_opening = fields.Many2one('hr.job', string="Odoo Job Opening", required=True)
@@ -28,8 +26,8 @@ class CoderScoutAssessment(models.Model):
                 raise UserError('The Assessment Start Time must be in the future.')
 
     @api.model
-    def _get_coderscout_assessments(self):
-        api_key = self.env['ir.config_parameter'].sudo().get_param('coderscout.api_key')
+    def _get_coderScout_assessments(self):
+        api_key = self.env['ir.config_parameter'].sudo().get_param('coder_scout_api_key')
         if not api_key:
             raise UserError(
                 'CoderScout API key is missing.\n'
@@ -54,6 +52,7 @@ class CoderScoutAssessment(models.Model):
                 )
 
             assessment_choices = [(str(assessment['id']), assessment['name']) for assessment in assessments]
+            assessment_choices.sort(key=lambda x: x[1])
             return assessment_choices
         except requests.exceptions.RequestException as e:
             raise UserError(
